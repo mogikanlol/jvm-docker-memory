@@ -1,0 +1,11 @@
+docker build -t oldjava .
+docker run --rm -ti oldjava
+docker run --rm -ti --memory=1g oldjava
+
+--rm - removes container from filesystem after execution
+
+
+
+docker build -t newjava -f Dockerfile-newjava .
+docker run --rm newjava
+docker run --rm --memory=1g newjava

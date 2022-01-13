@@ -1,0 +1,9 @@
+FROM openjdk:8-jdk-alpine
+COPY build/libs/*.jar /*.jar
+CMD ["sh", "-c", \
+     "java -version \
+      && java -jar *.jar"]
+
+# -XX:-UseContainerSupport - use container memory, enabled by default
+# -XX:+UseContainerSupport - enable, default
+# -XX:-UseContainerSupport - disable

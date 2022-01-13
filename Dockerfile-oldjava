@@ -1,0 +1,5 @@
+FROM openjdk:8u92-jdk-alpine
+COPY build/libs/*.jar /*.jar
+CMD ["sh", "-c", \
+     "java -version \
+      && java -jar *.jar"]
